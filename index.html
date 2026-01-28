@@ -17,7 +17,17 @@
             height: 100%;
             overflow-x: hidden;
             color: black;
-        
+        }
+
+        /* VIDEO NỀN */
+        .bg-video{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
         }
 
         /* Lớp phủ mờ */
@@ -38,11 +48,13 @@
         header h1 {
             font-size: 36px;
             margin-bottom: 10px;
+            color: white;
         }
 
         header p {
             font-size: 18px;
             opacity: 0.85;
+            color: white;
         }
 
         /* Thẻ thông tin cá nhân */
@@ -57,6 +69,7 @@
             max-width: 600px;
             width: 100%;
             margin-bottom: 35px;
+            color: white;
         }
 
         .profile-card img {
@@ -85,6 +98,7 @@
             padding: 25px 30px;
             max-width: 700px;
             width: 100%;
+            color: white;
         }
 
         .music-card h3 {
@@ -101,10 +115,31 @@
             margin-top: 40px;
             font-size: 14px;
             opacity: 0.7;
+            color: white;
+        }
+
+        /* Nút nhạc */
+        #musicBtn{
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 14px;
+            border: none;
+            border-radius: 12px;
+            background: rgba(0,0,0,0.65);
+            color: white;
+            cursor: pointer;
+            z-index: 9999;
         }
     </style>
 </head>
+
 <body>
+
+    <!-- VIDEO NỀN -->
+    <video class="bg-video" autoplay muted loop playsinline>
+        <source src="bg.mp4" type="video/mp4">
+    </video>
 
     <div class="overlay">
         <header>
@@ -117,7 +152,7 @@
             <img src="images/thanh.jpg" alt="Ảnh đại diện">
             <div class="profile-info">
                 <h2>Nguyễn Chí Thanh</h2>
-                <p>Sinh:1/1/2008</p>
+                <p>Sinh: 1/1/2008</p>
                 <p>Học sinh THPTDX</p>
                 <p>Sở thích: Nghe nhạc, xem phim, táy máy</p>
             </div>
@@ -127,27 +162,53 @@
         <div class="music-card">
             <h3>Nhạc tôi yêu thích</h3>
 
-          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2gGMJDtppeGj8s11mXaHKU?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2gGMJDtppeGj8s11mXaHKU?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4ZJKi7HXFDG2emN6xIdbmV?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4ZJKi7HXFDG2emN6xIdbmV?utm_source=generator" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-           <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2vzn8usBcuNL93DnTjEK0z?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2vzn8usBcuNL93DnTjEK0z?utm_source=generator" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/0tWEB6BxbI48XN79QE1JbT?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            
-            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3pNibJEDNz8dsonb5JiVtT?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        
-            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0ALcccXDAs1cUCiTtSr2Ti?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
- 
-            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0wPQF7LOPTFPkgi5NLf1mc?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0tWEB6BxbI48XN79QE1JbT?utm_source=generator" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5v88z8fn7GggENWrR9Gbir?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3pNibJEDNz8dsonb5JiVtT?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0ALcccXDAs1cUCiTtSr2Ti?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0wPQF7LOPTFPkgi5NLf1mc?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5v88z8fn7GggENWrR9Gbir?utm_source=generator&theme=0" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
 
         <footer>
             © 2026 - Trang web cá nhân
         </footer>
     </div>
+
+    <!-- NHẠC NỀN -->
+    <audio id="bgMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicBtn" onclick="toggleMusic()">🔊 Bật nhạc</button>
+
+    <script>
+        let isPlaying = false;
+
+        function toggleMusic() {
+            const music = document.getElementById("bgMusic");
+            const btn = document.getElementById("musicBtn");
+
+            if (!isPlaying) {
+                music.play();
+                btn.innerHTML = "🔇 Tắt nhạc";
+                isPlaying = true;
+            } else {
+                music.pause();
+                btn.innerHTML = "🔊 Bật nhạc";
+                isPlaying = false;
+            }
+        }
+    </script>
 
 </body>
 </html>
