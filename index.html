@@ -20,25 +20,21 @@
         }
 
         /* VIDEO NỀN */
-        .bg-video{
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -2;
-        }
+.bg-video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
 
-        /* Lớp phủ mờ */
-        .overlay {
-            min-height: 100vh;
-            background: rgba(0, 0, 0, 0.45);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 40px 20px;
-        }
+/* Lớp phủ mờ nằm trên video */
+.overlay{
+    position: relative;
+    z-index: 1;
+}
 
         header {
             margin-bottom: 30px;
@@ -215,6 +211,7 @@
             }
         }
     </script>
+
 
 </body>
 </html>
