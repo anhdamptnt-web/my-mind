@@ -188,7 +188,13 @@
     <audio id="bgMusic" loop>
         <source src="music.mp3" type="audio/mpeg">
     </audio>
+    <script>
+      const music = document.getElementById("bgMusic");
 
+      document.addEventListener("click", function () {
+        music.play();
+      }, { once: true });
+    </script>
     <button id="musicBtn" onclick="toggleMusic()">🔊 Bật nhạc</button>
 
     <script>
